@@ -26,4 +26,5 @@ def calcula_pontos_regra_simples(faces):
             if valor == face:
                 quant += 1
         resultado[face] = quant*face
+        face += 1
     return resultado
