@@ -54,4 +54,21 @@ def calcula_pontos_sequencia_baixa(rolados):
         return 15
     else:
         return 0
-    
+def calcula_pontos_sequencia_alta(rolados):
+    listas = [
+        [1,2,3,4,5],
+        [2,3,4,5,6],
+    ]
+    seqalta = False
+    for lista in listas:
+        contador = 0
+        if not seqalta:
+            for i in lista:
+                if i in rolados:
+                    contador += 1
+            if contador == 5:
+                seqalta = True
+    if seqalta:
+        return 30
+    else:
+        return 0
