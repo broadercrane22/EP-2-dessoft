@@ -7,3 +7,9 @@ def rolar_dados(qnt):
         dados.append(random.randint(1,6))
     return dados
 
+def guardar_dado(rolados,guardados,dado):
+    guardados.append(rolados[dado])
+    
+
+
+    return [rolados,guardados]
