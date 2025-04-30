@@ -9,7 +9,5 @@ def rolar_dados(qnt):
 
 def guardar_dado(rolados,guardados,dado):
     guardados.append(rolados[dado])
-    
-
-
+    del rolados[dado]
     return [rolados,guardados]
