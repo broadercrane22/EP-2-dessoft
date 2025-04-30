@@ -28,3 +28,8 @@ def calcula_pontos_regra_simples(faces):
         resultado[face] = quant*face
         face += 1
     return resultado
+def calcula_pontos_soma(rolados):
+    soma = 0
+    for i in rolados:
+        soma += i
+    return soma
