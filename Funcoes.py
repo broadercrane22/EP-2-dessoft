@@ -16,3 +16,14 @@ def remover_dado(rolados,guardados,indice):
     rolados.append(guardados[indice])
     del guardados[indice]
     return [rolados, guardados]
+
+def calcula_pontos_regra_simples(faces):
+    face = 1
+    resultado = {}
+    while face <= 6:
+        quant = 0
+        for valor in faces:
+            if valor == face:
+                quant += 1
+        resultado[face] = quant*face
+    return resultado
