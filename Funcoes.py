@@ -11,3 +11,8 @@ def guardar_dado(rolados,guardados,dado):
     guardados.append(rolados[dado])
     del rolados[dado]
     return [rolados,guardados]
+
+def remover_dado(rolados,guardados,indice):
+    rolados.append(guardados[indice])
+    del guardados[indice]
+    return [rolados, guardados]
