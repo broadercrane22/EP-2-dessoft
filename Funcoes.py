@@ -39,7 +39,7 @@ def calcula_pontos_sequencia_baixa(rolados):
     seqbaixa = False
     contador = 0
     valor = rolados[0]
-    for i in range(1,rolados):
+    for i in range(1,len(rolados)):
         if contador != 4:
             if rolados[i] -1 == valor:
                 seqbaixa = True
