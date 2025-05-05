@@ -36,20 +36,39 @@ def calcula_pontos_soma(rolados):
     return soma
 
 def calcula_pontos_sequencia_baixa(rolados):
+    listas = [
+        [1,2,3,4],
+        [2,3,4,5],
+        [3,4,5,6]
+    ]
     seqbaixa = False
-    contador = 0
-    valor = rolados[0]
-    for i in range(1,len(rolados)):
-        if contador != 4:
-            if rolados[i] -1 == valor:
+    for lista in listas:
+        contador = 0
+        if not seqbaixa:
+            for i in lista:
+                if i in rolados:
+                    contador += 1
+            if contador == 4:
                 seqbaixa = True
-                contador += 1
-            else:
-                seqbaixa = False
-                contador = 0
-            valor = rolados[i]
-    if seqbaixa and contador >= 4:
+    if seqbaixa:
         return 15
     else:
         return 0
-    
+def calcula_pontos_sequencia_alta(rolados):
+    listas = [
+        [1,2,3,4,5],
+        [2,3,4,5,6],
+    ]
+    seqalta = False
+    for lista in listas:
+        contador = 0
+        if not seqalta:
+            for i in lista:
+                if i in rolados:
+                    contador += 1
+            if contador == 5:
+                seqalta = True
+    if seqalta:
+        return 30
+    else:
+        return 0
