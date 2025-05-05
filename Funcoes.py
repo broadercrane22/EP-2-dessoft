@@ -72,3 +72,5 @@ def calcula_pontos_sequencia_alta(rolados):
         return 30
     else:
         return 0
+    
+    #lalalala
