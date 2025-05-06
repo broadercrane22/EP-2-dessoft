@@ -146,3 +146,11 @@ def calcula_pontos_regra_avancada(dados):
         'sequencia_alta': calcula_pontos_sequencia_alta(dados),
         'sequencia_baixa': calcula_pontos_sequencia_baixa(dados)
     }
+def faz_jogada(dados, categoria, cartela):
+    if len(categoria) == 1:
+        categoria = int(categoria)
+    if categoria in cartela['regra_simples']:
+        cartela['regra_simples'][categoria] = calcula_pontos_regra_simples(dados)[categoria]
+    elif categoria in cartela['regra_avancada']:
+        cartela['regra_avancada'][categoria] = calcula_pontos_regra_avancada(dados)[categoria]
+    return cartela
