@@ -74,3 +74,30 @@ def calcula_pontos_sequencia_alta(rolados):
         return 0
     
     #lalalala
+
+def calcula_pontos_full_house(dados):
+    if len(dados) != 5:
+        return 0
+
+    contagem = {}
+    for numero in dados:
+        if numero in contagem:
+            contagem[numero] += 1
+        else:
+            contagem[numero] = 1
+
+    encontrou_3 = False
+    encontrou_2 = False
+    for valor in contagem.values():
+        if valor == 3:
+            encontrou_3 = True
+        elif valor == 2:
+            encontrou_2 = True
+
+    if encontrou_3 and encontrou_2:
+        total = 0
+        for num in dados:
+            total += num
+        return total
+    else:
+        return 0
